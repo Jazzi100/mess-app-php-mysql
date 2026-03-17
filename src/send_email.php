@@ -47,8 +47,8 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'phpdeveloper10795@gmail.com';
-    $mail->Password   = 'tmsc vurv anzz nxdl'; // NOT normal password
+    $mail->Username   = 'example@gmail.com'; // your email
+    $mail->Password   = 'abcf efgh ijkl mnop'; // NOT normal password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
@@ -63,7 +63,7 @@ try {
     echo $monthRange; // Output: "Feb-Mar 2026"
 
     // Sender
-    $mail->setFrom('phpdeveloper10795@gmail.com', 'Expense Manager');
+    $mail->setFrom('example@gmail.com.com', 'Expense Manager');
 
     $result = mysqli_query($connection, "SELECT * FROM member where is_send_email = 1");
     while($row = mysqli_fetch_assoc($result)){
