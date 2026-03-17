@@ -1,0 +1,14 @@
+services:
+  mess-app:
+    build: .
+    container_name: mess-app
+    ports:
+      - "8081:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - zonemsp-network
+
+networks:
+  zonemsp-network:
+    driver: bridge
